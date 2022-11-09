@@ -15,14 +15,18 @@ export default {
             <img :src="thumb" alt="series">
 
         </div>
-        <h3>{{ series }}</h3>
+        <h3 class="h-1">{{ series }}</h3>
         <h4>{{ price }}</h4>
     </div>
 </template>
 
 <style lang="scss" scoped>
+@use "../styles/general.scss" as*;
+@use "../styles/partials/variables" as*;
+
 .card {
     width: calc(100% / 6 - 1rem);
+    background-color: lighten($color-current-slide, $amount: 5%);
 
     .img-card {
         width: 100%;
@@ -36,13 +40,18 @@ export default {
         width: 100%;
     }
 
+
     h3,
     h4 {
         color: white;
         font-weight: 500;
         font-size: .8rem;
         text-transform: uppercase;
-        margin-top: .5rem;
+
+    }
+
+    h3 {
+        margin-top: .8rem;
     }
 }
 </style>
