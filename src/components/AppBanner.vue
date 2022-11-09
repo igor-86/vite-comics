@@ -152,6 +152,8 @@ export default {
         text-transform: uppercase;
         font-weight: 700;
         font-size: .8rem;
+        cursor: pointer;
+
     }
 
 }
